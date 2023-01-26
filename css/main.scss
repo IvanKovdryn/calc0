@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.calc-wrapper {
+  padding: 75px 0;
+}
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+.title {
+  font-size: 45px;
+  font-weight: 600;
+  margin: 0 0 40px;
+}
+.row {
+  display: flex;
+  align-items: baseline;
+  gap: 75px;
+  @media (max-width: 850px) {
+    flex-wrap: wrap;
+  }
+}
+.col-left {
+  @media (min-width: 1207px) {
+    flex: 0 0 750px;
+  }
+}
+.program-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 0 0 30px;
+}
+.radio-hidden {
+  display: none;
+}
+.radio-label {
+  border: 1px solid rgb(188, 188, 188);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  position: relative;
+  word-spacing: 3px;
+  letter-spacing: 0.3px;
+  background-color: rgba(0, 128, 0, 0.054);
+  cursor: pointer;
+}
+.radio-label.active {
+  background-color: rgba(0, 128, 0, 0.65);
+  border: 1px solid rgb(122, 122, 122);
+}
+.radio-hidden:checked > .radio-label {
+  color: rgb(131, 255, 255);
+}
+.param {
+  margin: 0 0 50px;
+  cursor: default;
+}
+.param-details {
+  height: 100px;
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: 10px;
+  position: relative;
+  cursor: text;
+}
+.param-details.error {
+  border: 1px solid rgba(151, 0, 0, 0.4);
+  box-shadow: 0 0 2px 1px rgba(150, 0, 0, 0.4);
+}
+.param-title {
+  margin: 10px 20px 7px;
+  color: rgb(150, 150, 150);
+}
+.param-value {
+  border: unset;
+  font-size: 20px;
+  width: 100%;
+  margin: 0 0 0 20px;
+}
+.param-value:active {
+  border: unset;
+}
+.param-range-slider {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 5px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background: rgba(0, 128, 0, 0.65);
+  border: none;
+}
+.slider-limits {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 40px;
+  color: rgb(150, 150, 150);
+  pointer-events: none;
+  cursor: default;
+}
+.limit-50 {
+  padding: 0 0 0 75px;
+  position: relative;
+}
+.limit-50::before {
+  content: "";
+  height: 100%;
+  width: 1px;
+  left: 70px;
+  background-color: rgb(150, 150, 150);
+  position: absolute;
+}
+.col-right {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.item-title {
+  margin: 0 0 15px;
+  color: rgb(150, 150, 150);
+}
+.item-text {
+  font-size: 30px;
+  pointer-events: none;
+}
+.percent {
+  color: rgba(0, 128, 0, 0.85);
+}

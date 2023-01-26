@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./js/noUiSlider/dist/nouislider.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
+    <title>Calc</title>
+  </head>
+  <body>
+    <div class="calc-wrapper">
+      <div class="container">
+        <div class="calc">
+          <div class="title">Онлайн калькулятор</div>
+          <div class="row">
+            <form action="#" id="form" class="col-left">
+              <div class="program-wrapper">
+                <label for="base-value" class="radio-label">
+                  <input
+                    type="radio"
+                    name="program"
+                    value="base"
+                    id="base-value"
+                    class="radio-hidden"
+                    checked
+                  />
+                  Базова программа <span id="base-text">XX</span>
+                </label>
+
+                <label for="it-value" class="radio-label">
+                  <input
+                    type="radio"
+                    name="program"
+                    value="it"
+                    id="it-value"
+                    class="radio-hidden"
+                  />
+                  Іпотека для IT <span id="it-text">XX</span>
+                </label>
+
+                <label for="gov-value" class="radio-label">
+                  <input
+                    type="radio"
+                    name="program"
+                    value="gov"
+                    id="gov-value"
+                    class="radio-hidden"
+                  />
+                  Госпідтримка <span id="gov-text">XX</span>
+                </label>
+
+                <label for="zero-value" class="radio-label">
+                  <input
+                    type="radio"
+                    name="program"
+                    value="zero"
+                    id="zero-value"
+                    class="radio-hidden"
+                  />
+                  Без початкового внеску <span id="zero-text">XX</span>
+                </label>
+              </div>
+              <div class="params-wrapper">
+                <label class="param">
+                  <div class="param-details">
+                    <div class="param-title">Ціна нерухомості</div>
+                    <input
+                      type="text"
+                      class="param-value"
+                      value="12000000"
+                      inputmode="decimal"
+                      id="input-cost"
+                      max="100000000"
+                    />
+                    <div class="param-range-slider slider" id="slider"></div>
+                  </div>
+                </label>
+                <div class="slider-limits limit">
+                  <div class="limit-from">375 тис. ₴</div>
+                  <div class="limit-50">10 млн ₴</div>
+                  <div class="limit-to">100 млн ₴</div>
+                </div>
+                <label class="param">
+                  <div class="param-details">
+                    <div class="param-title">Початковий внесок</div>
+                    <input
+                      type="text"
+                      class="param-value"
+                      value="6000000"
+                      inputmode="decimal"
+                      id="input-downpayment"
+                    />
+                    <div
+                      class="param-range-slider slider"
+                      id="slider-downpayment"
+                    ></div>
+                  </div>
+                </label>
+                <div class="slider-limits limit">
+                  <div class="limit-from">15%</div>
+                  <div class="limit-to">90%</div>
+                </div>
+                <label class="param">
+                  <div class="param-details">
+                    <div class="param-title">Строк кредиту</div>
+                    <input
+                      type="text"
+                      class="param-value"
+                      value="12"
+                      inputmode="decimal"
+                      id="input-term"
+                    />
+                    <div class="param-range-slider" id="slider-term"></div>
+                  </div>
+                </label>
+                <div class="slider-limits limit">
+                  <div class="limit-from">1 год</div>
+                  <div class="limit-to">30 років</div>
+                </div>
+              </div>
+            </form>
+            <div class="col-right">
+              <div class="item">
+                <div class="item-title">Щомісячна оплата</div>
+                <div class="item-text" id="total-month-payment">12</div>
+              </div>
+              <div class="item">
+                <div class="item-title">Відсоткова ставка</div>
+                <div class="item-text percent" id="total-percent">XX</div>
+              </div>
+              <div class="item">
+                <div class="item-title">Сума кредиту</div>
+                <input class="item-text" id="total-cost" value="XXXXXXXX" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/noUiSlider/dist/nouislider.min.js"></script>
+    <script src="./js/cleave/dist/cleave.min.js"></script>
+    <script src="./js/formatters.js" type="module"></script>
+    <script src="./js/formatInput.js"></script>
+    <script src="./js/programRates.js" type="module"></script>
+  </body>
+</html>
